@@ -1,21 +1,9 @@
 # Tracker
+https://trackr-kaigao.firebaseapp.com/login Welcome to play with it:)
 
 This project is used to track devices' inventory, manage 3 different levels of users.
 
 Client needs: The Mobile Application Design & Development program wants keep track of who currently has which devices in their possession so students are able to borrow (sign out) devices overnight from program frofessors.
-
-
-## Website Features
-1. A log-in is required for all features. Entering a valid username and password for the view and other operations. Valid means that the username exists in the Firebase database.
-2. View basic table of data about the phones including device name, operating system, device model number, operating system version, sign out status, signed out by WHO, etc.
-3. Ability to filter the view table of data.
-4. Ability for Teaching Assistants(TAs) and Professors to locate any device by seeing it on a map.
-5. Display a QR code for a device only for Professors
-6. TAs can have additional access to the add and edit screens. One screen for editing all the information about the devices (NOT sign out status) plus adding new devices. Use modal window to add new devices.
-7. No delete capability for TA users, only Professor users can delete devices from inventory.
-8. In addition to TA users' permissions, professor users will also be able to override the signed-in / out status, generate QR code for a device
-9. Professor users will need a screen to add new users and assign users with different levels of access.
-
 
 ## Development Environment
 • Angular5
@@ -31,6 +19,18 @@ Client needs: The Mobile Application Design & Development program wants keep tra
 • Firebase
 • Node.js
 • OS: darwin x64
+
+## Website Features
+1. A log-in is required for all features. Entering a valid username and password for the view and other operations. Valid means that the username exists in the Firebase database.
+2. View basic table of data about the phones including device name, operating system, device model number, operating system version, sign out status, signed out by WHO, etc.
+3. Ability to filter the view table of data.
+4. Ability for Teaching Assistants(TAs) and Professors to locate any device by seeing it on a map.
+5. Display a QR code for a device only for Professors
+6. TAs can have additional access to the add and edit screens. One screen for editing all the information about the devices (NOT sign out status) plus adding new devices. Use modal window to add new devices.
+7. No delete capability for TA users, only Professor users can delete devices from inventory.
+8. In addition to TA users' permissions, professor users will also be able to override the signed-in / out status, generate QR code for a device
+9. Professor users will need a screen to add new users and assign users with different levels of access.
+
 
 ## Technology Stack
 QR Codes is to be generated on the website and scanned. 
