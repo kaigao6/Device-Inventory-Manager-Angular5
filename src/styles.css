@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+/* a {
+    background-color: inherit;
+}
+a {background-color:transparent !important;} */
+.fa-plus-circle {
+  color: #5cb85c;
+}
+.fa-plus-circle:hover{
+  color: green;
+}
+
+.fa-user-plus{
+  color: #5cb85c;
+}
+.fa-user-plus:hover{
+  color: green;
+
+}
+
+.fa-trash-alt{
+  color: #d9534f;
+}
+.fa-trash-alt:hover{
+  color: red;
+
+}
+
+.fa-edit{
+  color: #ffc844;
+}
+.fa-edit:hover{
+  color: orange;
+}
+
+.fa-user-secret{
+  color: #ffc844;
+  color: #443f3f;
+}
+.fa-user-secret:hover{
+  color: orange;
+  color: #716767;
+}
+
+nav.navbar.navbar-inverse{
+margin-bottom: 5px;
+}
+/* .navbar-default { margin-bottom: 0px; } */

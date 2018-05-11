@@ -1,0 +1,96 @@
+<!-- <p>
+  user-list works!
+</p> -->
+
+
+<div class="container" >
+
+  <!--909090   D8D8D8-->
+  <!-- <ul class="nav nav-pills nav-justified"  style="background-color: #D8D8D8;">
+    <li class="nav-item" [class.active]="isAllUsers" (click)="allClicked()">
+      <a data-toggle="tab" class="btn btn-senondary " [routerLink]="['./']" >All users</a>
+    </li>
+    <li class="nav-item " [class.active]="isAdmins" (click)="adminClicked()">
+      <a data-toggle="tab" class="nav-link" [routerLink]="['./admins']" >Admins</a>
+    </li>
+    <li class="nav-item " [class.active]= "isPas" (click)="pasClicked()">
+      <a data-toggle="tab" class="nav-link" [routerLink]="['./pas']" >PAs</a>
+    </li>
+  </ul> -->
+
+<!--
+   <ul class="nav nav-tabs" style="margin-top:4px;background:rgba(0,0,0,0.1);">
+      <li class="nav-item">
+        <a class="nav-link " (click)="title=null">All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="title='iOS'">iOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="title='Android'">Android</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="title='Available'">Available</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="title='Signed Out'">Signed Out</a>
+      </li>
+
+    </ul> -->
+
+
+    <ul *ngIf="isAddUser" class="nav nav-tabs" style="margin-top:4px;background:rgba(0,0,0,0.1);">
+
+    <li class="nav-item">
+      <a  style="padding:0;" (click)="isAddUser = true" [routerLink]="['./useradd']"><i style="padding-left:5px;padding-top:7px" class="fas fa-user-plus fa-2x"></i></a>
+
+    </li>
+
+    <li class="nav-item">
+      <a  class="nav-link" [routerLink]="['./']" (click)="title=null">All</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['./pas']" (click)="title='iOS'">Teaching Assistants</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['./admins']" (click)="title='Android'">Professors</a>
+    </li>
+
+  </ul>
+
+
+    <!-- <li class="nav-item ">
+      <a class="nav-link" [routerLink]="['./useradd']" >Add user</a>
+    </li> -->
+  <!-- <div class="row">
+    <div class="col-xs-12">
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Type</th>
+            <th>ID</th>
+            <th>Empower</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td> {{user.name}} </td>
+            <td>{{user.email}}</td>
+            <td>xxxx</td>
+            <td>{{user.id}}</td>
+            <td>
+              <button  class="btn btn-warning pull-right" (click)=onPaLevel(user.id)>Assign PA</button>
+              <button class="btn btn-info pull-right" (click)=onDismissPa(user.id)>Dismiss PA</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+  <router-outlet></router-outlet>
+
+
+</div>

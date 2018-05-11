@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse ">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand disabled disable-links" >Trackr</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li [class.active]="isHome"  (click)=homeClicked()><a data-toggle="tab"  routerLink='/home'>Devices List</a></li>
+        <li *ngIf="isAdminLoggedin" [class.active]="isManage"  (click)=manageClicked()><a data-toggle="tab"  [routerLink]="['/home/usersmanage']">Manage Users</a></li>
+
+        <!-- <li *ngIf="isAdminLoggedin" [class.active]="isManage" (click)="manageClicked()"><a data-toggle="tab"  [routerLink]="['./usersmanage']" >Manage Users1</a></li> -->
+        <!-- <li><a href="#contact">Change Password</a></li> -->
+        <!-- <li *ngIf="isAdminLoggedin" [class.active]="isManage" (click)="manageClicked()" class="dropdown">
+          <a routerLink='/home' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage Users <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['/home/usersmanage']">All users</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a [routerLink]="['/home/usersmanage/pas']">PA users</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a [routerLink]="['/home/usersmanage/admins']">Admin users</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right ">
+        <!-- <li><a routerLink='/login'>Login</a></li> -->
+        <!-- <li><a routerLink='/signup'>Signup</a></li> -->
+        <li class="disabled"><a class="disable-links" style="color:#9d9d9d" href="">{{title}} {{loggedinUser}}</a></li>
+
+        <li><a style="cursor:pointer;" (click)="onLogout()">Logout <i class="fas fa-sign-out-alt"></i></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,64 @@
+<!-- <p>
+  pa-list works!
+</p> -->
+
+<div >
+
+  <div class="row">
+    <!-- <div class="col-xs-12" style="margin-top:12px">
+      <form (ngSubmit)="onAddPa(f)" #f="ngForm" class="form-inline pull-right">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" ngModel class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!f.valid">Add PA</button>
+      </form>
+    </div> -->
+
+
+
+    <div class="col-xs-12">
+
+      <table class="table table-condensed table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Type</th>
+            <!-- <th>ID</th> -->
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pa of pas">
+            <td> {{pa.name}} </td>
+            <td>{{pa.email}}</td>
+            <td>Teaching Assistant</td>
+            <!-- <td>{{pa.id}}</td> -->
+            <td>
+              <!-- <button  class="btn btn-danger pull-right" (click)=onDelete(pa.id)>Delete</button> -->
+
+              <a (click)=onDelete(pa.id) ><i class="far fa-trash-alt fa-lg"></i></a>
+
+              <!-- <button class="btn btn-info pull-right" (click)=onDismissPa(pa.id)>Dismiss PA</button> -->
+
+            </td>
+          </tr>
+        </tbody>
+
+
+
+      </table>
+
+    </div>
+  </div>
+  <!-- <div class="row">
+
+
+  </div> -->
+
+</div>

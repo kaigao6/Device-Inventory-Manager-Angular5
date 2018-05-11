@@ -1,0 +1,47 @@
+<div class="row">
+
+  <div class="col-xs-10 col-sm-6 col-md-4 col-xs-offset-1 col-sm-offset-3 col-md-offset-4">
+    <h1>Trackr</h1>
+
+    <hr>
+    <form (ngSubmit)="onLogin(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" ngModel class="form-control" required>
+      </div>
+      <!-- <button class="btn btn-danger pull-right" (click)="">Show Login information</button> -->
+
+      <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Login</button>
+      <button type="button"  class="btn  pull-right" [class.btn-success]="isLoginInfoShow" [class.btn-info]="!isLoginInfoShow" (click)="loginBtnClicked()">
+        <span *ngIf="!isLoginInfoShow">Show Login information</span>
+        <span *ngIf="isLoginInfoShow">Hide Login information</span>
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<div class="container">
+
+</div>
+
+<div *ngIf="isLoginInfoShow" class="jumbotron list-group container navbar-fixed-bottom">
+  <h2 style="color:red">Login Info shown below (Welcome to play)</h2>
+
+  <h3>3 different levels of users with different views and actions (permissions)</h3>
+  <!-- <p style="font-weight: bold;">Level 1 </p>
+  <p>Email: student@test.com  Password:11111</p>
+  <p style="font-weight: bold;">Level 2 </p>
+  <p>Email: ta@test.com  Password:222222</p>
+  <p style="font-weight: bold;">Level 3</p>
+  <p>Email: professor@test.com  Password:333333</p> -->
+
+  <a class="list-group-item list-group-item-success">Level 1 - <span >Email: student@test.com </span> &emsp; &emsp;  <span class="">Password: 111111</span>  &emsp; Can only view device info</a>
+  <!-- <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a> -->
+  <a  class="list-group-item list-group-item-warning">Level 2 - Email: ta@test.com   &emsp; &emsp; &emsp; &emsp; <span class="">Password: 222222</span>  &emsp; Plus above, can edit device info and track device location</a>
+  <a  class="list-group-item list-group-item-danger">Level 3 - Email: professor@test.com     &emsp;  <span class="">Password: 333333</span>  &emsp; Plus above, can delete device, add and upgrade/degrade users with different roles</a>
+</div>

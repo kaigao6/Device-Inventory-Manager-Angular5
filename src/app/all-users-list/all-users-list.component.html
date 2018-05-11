@@ -1,0 +1,62 @@
+<!-- <p>
+  all-users-list works!
+</p> -->
+<div>
+  <!-- <div >
+    <a class="addCircle" style="padding:0;margin:0" [routerLink]="['./useradd']"><i style="padding-left:5px" class="fas fa-plus-circle fa-3x"></i></a>
+  </div> -->
+
+  <!-- <button [routerLink]="['./useradd']" class="btn btn-success" >Add user</button> -->
+
+  <!-- <a style="padding:0;margin:0" [routerLink]="['./useradd']"><i style="padding-left:5px" class="fas fa-plus-circle fa-3x"></i></a> -->
+
+  <!-- <button [routerLink]="['./useradd']" class="btn btn-success" (click)="isAddFormHidden = !isAddFormHidden" >Add user</button> -->
+
+
+<!-- app-signup -->
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table table-condensed table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Type</th>
+            <!-- <th>Assign</th> -->
+            <th>Assign&emsp;Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of allUsers">
+            <td> {{user.name}} </td>
+            <td>{{user.email}}</td>
+            <td>{{user.type}}</td>
+
+            <!-- <td> -->
+              <!-- <a [routerLink]="['./useredit',user.id]"><i class="fas fa-user-secret fa-lg"></i></a> -->
+
+              <!-- <button  class="btn btn-warning" (click)=assignToPa(user.id)>P</button>
+
+              <button  class="btn btn-danger" (click)=Assign(user.id)>A</button> -->
+
+
+            <!-- </td> -->
+            <td>
+              <!-- <button  class="btn btn-danger pull-right" (click)=onDelete(user.id)>Delete</button> -->
+&emsp;
+              <a  [routerLink]="['./useredit',user.id]"><i class="fas fa-user-secret fa-lg"></i></a>
+&emsp;&emsp;
+              <a (click)=onDelete(user.id) ><i class="far fa-trash-alt fa-lg"></i></a>
+
+
+              <!-- <button  class="btn btn-warning pull-right" (click)=onPaLevel(user.id)>Assign PA</button>
+              <button class="btn btn-info pull-right" (click)=onDismissPa(user.id)>Dismiss PA</button> -->
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

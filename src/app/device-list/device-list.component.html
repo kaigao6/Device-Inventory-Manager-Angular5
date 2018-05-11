@@ -1,0 +1,134 @@
+<!-- <p>
+  device-list works!(to be deleted）
+</p> -->
+
+
+<div class="container">
+  <!-- <button *ngIf="isPaLoggedin" [routerLink]="['./deviceadd']" class="btn btn-success">Add a new device</button> -->
+  <!-- <button style="margin: 0 20px" class="btn btn-danger pull-right" (click)="onSave()">Save All Devices</button> -->
+  <!-- <button class="btn btn-warning pull-right" (click)="onGet()">Get Devices</button> -->
+
+  <!-- <ul *ngIf="isPaLoggedin||isAdminLoggedin" class="">  </ul> -->
+    <!-- <li class="">
+
+      <a style="padding:0;margin:0" [routerLink]="['./deviceadd']"><i style="padding-left:5px" class="fa fa-plus-circle fa-3x"></i></a>
+
+    </li> -->
+
+    <!-- <a  *ngIf="isPaLoggedin" [routerLink]="['./deviceadd']">Add a new device</a> -->
+    <!-- <button [routerLink]="['./deviceadd']" class="btn btn-success "></button> -->
+    <!-- <span class="glyphicon glyphicon-plus"></span> -->
+    <!-- <i [routerLink]="['./deviceadd']" class="fa fa-plus-circle fa-5x"></i> -->
+
+    <!-- <div><i class="fas fa-plus-circle fa-5x" style="background:MistyRose"></i> Home</div> -->
+    <!-- <a style=" color:green">
+        <i class="fas fa-plus-circle"></i></a> -->
+
+
+    <!-- <li class="pull-right"><button  *ngIf="isAdminLoggedin" [routerLink]="['./usersmanage']" class="btn btn-primary" >Manage Users</button></li> -->
+    <!-- <li class="pull-right"><button   *ngIf="isAdminLoggedin" [routerLink]="['./signup']" class="btn btn-primary">Add User</button></li> -->
+
+
+
+  <!-- <nav class="nav pull-right">
+    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </nav> -->
+
+  <!-- <ul class="nav nav-pills " style="margin-top:4px;background:rgba(0,0,0,0.1);"> -->
+
+
+    <ul class="nav nav-tabs" style="margin-top:4px;background:rgba(0,0,0,0.1);">
+
+      <li class="nav-item " *ngIf="isPaLoggedin||isAdminLoggedin">
+        <a class="addCircle" style="padding:0;margin:0" [routerLink]="['./deviceadd']"><i style="padding-left:5px;padding-top:7px" class="fas fa-plus-circle fa-2x"></i></a>
+
+      </li>
+    <li class="nav-item">
+      <a class="nav-link  " (click)="title=null">All</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="title='iOS'">iOS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="title='Android'">Android</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="title='Available'">Available</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="title='Signed Out'">Signed Out</a>
+    </li>
+
+
+  </ul>
+<!--
+  <div >
+    <a class="addCircle" style="padding:0;margin:0" [routerLink]="['./deviceadd']"><i style="padding-left:5px" class="fas fa-plus-circle fa-3x"></i></a>
+  </div> -->
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table table-condensed table-striped table-hover ">
+        <thead class="thead-light">
+          <tr>
+            <th>Name</th>
+            <!-- <th *ngIf="isPaLoggedin||isAdminLoggedin">Edit</th> -->
+            <!-- <th>ID</th> -->
+            <th>OS</th>
+            <th>Version</th>
+            <th>Availability</th>
+            <th *ngIf="isPaLoggedin||isAdminLoggedin">
+              <span>Edit</span><span *ngIf="isAdminLoggedin">&emsp;Delete</span>
+
+
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let device of devices | filter:title">
+            <td> <a [routerLink]="['./devicedetail',device.id]">{{device.Device_Name}}</a>
+            </td>
+            <!-- <td *ngIf="isPaLoggedin||isAdminLoggedin">
+              <a [routerLink]="['./deviceedit',device.id]"><i class="far fa-edit fa-lg"></i></a>
+            </td> -->
+            <td>{{device.Device_OS}}</td>
+            <td>{{device.Device_OSv}}</td>
+            <td>
+              <!-- {{device.Device_Status}} -->
+              <span *ngIf="device.Device_Status!='Available'"><i style="color:#d9534f"  class="fas fa-minus-circle fa-lg"></i></span>
+              <span *ngIf="device.Device_Status=='Available'"><i style="color:#5cb85c" class="fas fa-check-circle fa-lg"></i></span>
+
+            </td>
+            <td>
+              <!-- <h4><a [routerLink]="['./device',device.id]">{{device.id}}</a></h4> -->
+              <!-- <button class="btn btn-info"[routerLink]="['./devicedetail',device.id]">Details</button> -->
+              <!-- <button  *ngIf="isPaLoggedin||isAdminLoggedin" class="btn btn-warning " [routerLink]="['./deviceedit',device.id]">Edit</button> -->
+              <!-- <button *ngIf="isAdminLoggedin" class="btn btn-danger pull-right" (click)=onDelete(device.id)>Delete</button> -->
+
+              <a  *ngIf="isPaLoggedin||isAdminLoggedin" [routerLink]="['./deviceedit',device.id]"><i class="far fa-edit fa-lg"></i></a>
+&emsp;
+              <a  *ngIf="isAdminLoggedin" (click)=onDelete(device.id)><i class="far fa-trash-alt fa-lg"></i></a>
+
+
+              <!-- <button class="btn btn-primary"
+                                  (click)="removeRecordPlugin(user)">Details</button> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

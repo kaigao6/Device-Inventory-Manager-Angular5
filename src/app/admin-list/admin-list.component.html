@@ -1,0 +1,53 @@
+<!-- <p>
+  admin-list works!
+</p> -->
+<div >
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <!-- <form style="margin-top:12px" (ngSubmit)="onAddAdmin(f)" #f="ngForm" class="form-inline pull-right">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" ngModel class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!f.valid">Add Admin</button>
+      </form> -->
+
+      <table class="table table-condensed table-striped table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Type</th>
+            <!-- <th>ID</th> -->
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let admin of admins">
+            <td> {{admin.name}} </td>
+            <td>{{admin.email}}</td>
+            <td>Professor</td>
+            <!-- <td>{{admin.id}}</td> -->
+            <td>
+              <!-- <button  class="btn btn-danger pull-right" (click)=onDelete(admin.id)>Delete</button> -->
+
+              <a (click)=onDelete(admin.id) ><i class="far fa-trash-alt fa-lg"></i></a>
+
+
+              <!-- <button  class="btn btn-warning pull-right" (click)=onadminLevel(admin.id)>Assign admin</button>
+              <button class="btn btn-info pull-right" (click)=onDismissadmin(admin.id)>Dismiss admin</button> -->
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

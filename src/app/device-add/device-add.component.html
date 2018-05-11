@@ -1,0 +1,106 @@
+<!-- <p>
+To be deleted!   device-add works!
+</p> -->
+
+<div class="container">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <form #myform="ngForm">
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Device Name</label>
+        <div class="col-sm-9">
+          <input #devicename="ngModel" ngModel name="devicename" type="text" class="form-control" placeholder="Huawei P20-1">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Device type</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="deviceType" class="form-control" placeholder="Phone">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Operating System</label>
+        <div class="col-sm-9">
+        <input type="text" #os="ngModel" ngModel name="os" class="form-control" placeholder="Android">
+      </div>
+    </div>
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">OS Version</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="osVersion" class="form-control" placeholder="7.0">
+        </div>
+      </div>
+      <!--  added -->
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Device Color</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="color" class="form-control" placeholder="Black">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">IMEI Number</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="imei" class="form-control" placeholder="35 535808 053752 8">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Device Identifier</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="deviceIdentifier" class="form-control" placeholder="9DA6D171-981C-47E4-AF96-A5C956E605B8">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Device Resolution</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="resolution" class="form-control" placeholder="1080*1920">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Screen Size</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="screenSize" class="form-control" placeholder="5.5 Inch">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Manufacturer</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" ngModel name="manufacturer" class="form-control" placeholder="Huawei">
+        </div>
+      </div>
+      <!--  added -->
+
+      <button class="btn btn-primary pull-right" (click)="onAddBtnClicked(myform.value)">Add to device list</button>
+
+      <!-- <button type="submit" class="btn btn-primary">Add a new device</button> -->
+    </form>
+    <!-- <div>
+      {{myform.value | json}}
+    </div>
+
+    <div>{{devicename.value}}</div> -->
+
+  </div>
+</div>
+
+
+
+
+
+
+<!--
+<form  #myform="ngForm" (ngSubmit)="onSubmit(myform.value)" >
+
+  <div ngModelGroup = "userInfo">
+    <div>Username: <input #username="ngModel" ngModel name="username" type="text" required></div>
+    <div>Moile: <input #mobile="ngModel" ngModel name="mobile" type="text"></div>
+  </div>
+
+  <div>Password: <input #pwd="ngModel" ngModel name="password" type="text"></div>
+  <button type="submit">Add a new device</button>
+</form> -->

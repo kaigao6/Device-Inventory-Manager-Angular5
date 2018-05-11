@@ -1,0 +1,140 @@
+<!-- <p>
+  device-detail works!
+</p> -->
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-5">
+
+      <h2>{{device.Device_Name}}</h2>
+      <br>
+
+      <button *ngIf="isAdminLoggedin" class="btn btn-warning" (click)="returnBtnClicked()">Manually return</button>
+      <button style="margin-left:20px" *ngIf="isAdminLoggedin" class="btn" [class.btn-primary]="isQrShow" [class.btn-success]="!isQrShow" (click)="generateQrCode()">
+        <span *ngIf="!isQrShow">Generate QR code</span>
+        <span *ngIf="isQrShow">Hide QR code</span>
+      </button>
+      <br *ngIf="isAdminLoggedin">
+      <br *ngIf="isAdminLoggedin">
+      <div>
+        <!-- <p>{{deviceId}}</p> -->
+        <h4>Specifications </h4>
+        <p>Device type: {{device.Device_Type}}</p>
+        <p>IMEI#: {{device.Device_IMEI}}</p>
+        <p>Device_Identifier: {{device.Device_Identifier}}</p>
+        <p>OS: {{device.Device_OS}}</p>
+        <p>OS version: {{device.Device_OSv}}</p>
+        <p>Screen vize: {{device.Device_ScreenSz}}</p>
+        <p>Resolution: {{device.Device_Resolution}}</p>
+        <p>Color: {{device.Device_Color}}</p>
+        <p>Manufacturer: {{device.Manufacturer}}</p>
+      </div>
+      <br>
+      <div>
+        <h4>Signout Info</h4>
+
+        <p>
+          Current status: <strong>{{device.Device_Status}}</strong>
+        </p>
+
+        <!-- <p>Current status: {{device.Device_Status}}</p> -->
+        <p>Signout time: {{device.Signout_Time}}</p>
+        <p>Expiration Time: {{device.Signout_DatePikr}}</p>
+        <p>Signout Email: {{device.Signout_Email}}</p>
+        <!-- <p>Permit Email: {{device.Signout_PermitEmail}}</p> -->
+        <p>Sighout Type: {{device.Signout_Permit}}</p>
+      </div>
+      <br>
+
+
+
+
+    </div>
+    <div *ngIf="isPaLoggedin||isAdminLoggedin" class="col-sm-7">
+
+      <div class="row">
+
+
+
+        <div *ngIf="isStuOut" class="col-xs-6 col-md-4 col-lg-3">
+          <p style="padding-left:22px">Student(Sign out)</p>
+          <br>
+          <a href="#" class="thumbnail disable-links">
+            <img [src]="stdOutImgSrc" [class.rotate90]="isImgRotate" alt="">  </a>
+        </div>
+
+        <div *ngIf="isStuIn" class="col-xs-6 col-md-4 col-lg-3">
+          <p style="padding-left:22px">Student(Sign in)</p>
+          <br>
+          <a href="#" class="thumbnail disable-links">
+            <img [src]="stdInImgSrc"  [class.rotate90]="isImgRotate" alt="">  </a>
+        </div>
+
+        <div *ngIf="isAmindOut" class="col-xs-6 col-md-4 col-lg-3">
+          <p style="padding-left:22px">Professor</p>
+          <br>
+          <a href="#" class="thumbnail disable-links">
+            <img [src]="adminImgSrc"  [class.rotate90]="isImgRotate" alt="">  </a>
+        </div>
+
+
+        <div *ngIf="isQrShow"  class="col-xs-6 col-md-4 col-lg-3 pull-right">
+          <p style="padding-left:5px">Device QR code</p>
+          <br>
+
+          <a href="#" class="thumbnail disable-links">
+            <qr-code  [value]="qrData" [size]="150"></qr-code>
+
+            </a>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- <div class="">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img [src]="stdImgSrc" class="rotate90 img-thumbnail" alt="">
+            <img [src]="adminImgSrc" class="rotate90 img-thumbnail" alt="">
+          </div>
+        </div>
+
+      </div> -->
+
+      <!-- <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div style="  margin-left: 22px">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+
+
+
+      <!-- <div>
+        {{device.logHistory[0]}}
+      </div> -->
+
+    </div>
+
+  </div>
+
+
+
+
+</div>

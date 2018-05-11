@@ -1,0 +1,86 @@
+<!-- <p>
+To be deleted!  device-edit works!
+</p> -->
+<div class="container">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <form #myform="ngForm">
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Device Name</label>
+        <div class="col-sm-9">
+          <input #devicename="ngModel" [(ngModel)]="device.Device_Name" name="devicename" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Device type</label>
+        <div class="col-sm-9">
+          <input #deviceType="ngModel" [(ngModel)]="device.Device_Type" name="deviceType" type="text" class="form-control">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Operating System</label>
+        <div class="col-sm-9">
+          <input type="text" #os="ngModel" [(ngModel)]="device.Device_OS" name="os" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">OS Version</label>
+        <div class="col-sm-9">
+
+          <input type="text" #os="ngModel" [(ngModel)]="device.Device_OSv" name="osVersion" class="form-control">
+        </div>
+      </div>
+
+    <!-- added -->
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Device Color</label>
+      <div class="col-sm-9">
+        <input #deviceColor="ngModel" [(ngModel)]="device.Device_Color" name="deviceColor" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">IMEI Number</label>
+      <div class="col-sm-9">
+        <input #imei="ngModel" [(ngModel)]="device.Device_IMEI" name="imei" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Device Identifier</label>
+      <div class="col-sm-9">
+        <input #imei="ngModel" [(ngModel)]="device.Device_Identifier" name="deviceIdentifier" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Device Resolution</label>
+      <div class="col-sm-9">
+        <input #resolution="ngModel" [(ngModel)]="device.Device_Resolution" name="resolution" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Screen Size</label>
+      <div class="col-sm-9">
+        <input #screenSize="ngModel" [(ngModel)]="device.Device_ScreenSz" name="screenSize" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Manufacturer</label>
+      <div class="col-sm-9">
+        <input #manufacturer="ngModel" [(ngModel)]="device.Manufacturer" name="manufacturer" type="text" class="form-control">
+      </div>
+    </div>
+
+      <button class="btn btn-primary pull-right" (click)="onSaveBtnClicked(myform.value)">Save changes</button>
+
+    </form>
+
+
+  </div>
+</div>
