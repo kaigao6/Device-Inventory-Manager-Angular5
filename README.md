@@ -18,19 +18,18 @@ Client needs: The Mobile Application Design & Development program wants keep tra
 
 
 ## Development Environment
-• Angular: 5.2.9
-• Angular/cli: 1.7.3
-• Angular router: ^5.2.0
-• rxjs: ^5.5.6
-• Angular Google Map - agm: 1.0.0-beta.2
+• Angular5
+• Angular router
+• RxJS
+• Angular Google Map - agm
 • Angular2-qrcode
-• Bootstrap (version ^3.3.7)
-• CSS (version 3)
-• Typescript: 2.5.3
-• Webpack: 3.11.0
-• jQuery: ^3.3.1,
-• Firebase: ^4.12.1,
-• Node: 8.9.4
+• Bootstrap4 
+• CSS3 
+• Typescript
+• Webpack
+• jQuery
+• Firebase
+• Node.js
 • OS: darwin x64
 
 ## Technology Stack
