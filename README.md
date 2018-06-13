@@ -4,7 +4,7 @@ Welcome to play with it:)
 
 This project is used to track devices' inventory, manage 3 different levels of users.
 
-Client needs: The Mobile Application Design & Development program wants keep track of who currently has which devices in their possession so students are able to borrow (sign out) devices overnight from program TAs or professors. TAs or professors have different authorities to track, modify devices info & status and manage users.
+Client needs: The Mobile Application Design & Development program wants keep track of who currently has which devices in their possession so students are able to borrow (sign out) devices overnight from program TAs or professors. TAs or professors have different authorities to track, update devices info & status and manage users.
 
 ## My role in this project
 • Acted as Team Leader developed native Android and iOS app installed on every device which allows students to borrow and return devices via taking a selfie (facial recognition required) and scanning a device QR code 
