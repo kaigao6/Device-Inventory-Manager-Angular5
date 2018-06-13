@@ -10,13 +10,13 @@ Client needs: The Mobile Application Design & Development program wants keep tra
 • Acted as Team Leader developed native Android and iOS app installed on every device which allows students to borrow and return devices via taking a selfie (facial recognition required) and scanning a device QR code 
 • Independently developed dashboard website to track, manage devices & manage 3 different levels of users.
 
-• Applied Angular 5, TypeScript, Bootstrap, jQuery for the front-end dashboard website. Angular routing for URL changes. Pipe for filtering devices. Angular guards to manage different views and permissions for different users.
-• Applied RxJS library for reactive programming using observables to deal with server response asynchronously. 
-• Firebase as the back-end to save all the inventory information shared by both the website and the mobile apps. 
-• Implemented Firebase authentication using email and password for registered users’ login management. 
-• Applied Angular Google Map - agm API to track the current device location
-• Used Angular2-qrcode to generate QR code on the website and native Face Detection APIs for Facial recognition
-• Used Git to manage and maintain the project
+1. Applied Angular 5, TypeScript, Bootstrap, jQuery for the front-end dashboard website. Angular routing for URL changes. Pipe for filtering devices. Angular guards to manage different views and permissions for different users.
+2. Applied RxJS library for reactive programming using observables to deal with server response asynchronously. 
+3. Firebase as the back-end to save all the inventory information shared by both the website and the mobile apps. 
+4. Implemented Firebase authentication using email and password for registered users’ login management. 
+5. Applied Angular Google Map - agm API to track the current device location
+6. Used Angular2-qrcode to generate QR code on the website and native Face Detection APIs for Facial recognition
+7. Used Git to manage and maintain the project
 
 ## Website Features
 1. A log-in is required for all features. Entering a valid username and password for the view and other operations. Valid means that the username exists in the Firebase database.
