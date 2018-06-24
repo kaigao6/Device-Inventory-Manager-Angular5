@@ -54,4 +54,4 @@ Facial recognition is required for users to borrow (sign out) devices.
 
 ## Development server
 Run npm install to install all necessary packages.
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
