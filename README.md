@@ -1,6 +1,6 @@
 # Tracker
 Demo Link: https://trackr-kaigao.firebaseapp.com/login 
-Welcome to play with it:)
+
 
 This project is used to track devices' inventory, manage 3 different levels of users.
 
