@@ -2,7 +2,7 @@
 Demo Link: https://trackr-kaigao.firebaseapp.com/login 
 
 
-This project is used to track devices' inventory, manage 3 different levels of users.
+This project is used to track devices' inventory, manage 3 different levels of users
 
 Client needs: The Mobile Application Design & Development program wants keep track of who currently has which devices in their possession so students are able to borrow (sign out) devices overnight from program TAs or professors. TAs or professors have different authorities to track, update devices info & status and manage users.
 
