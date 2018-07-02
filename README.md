@@ -1,4 +1,4 @@
-# Device Manager (TrackR)
+# Device Inventory Manager (TrackR)
 Demo Link: https://trackr-kaigao.firebaseapp.com/login 
 
 
@@ -7,16 +7,17 @@ This project is to manage and track devices' inventory, manage 3 different level
 Client needs: The Mobile Application Design & Development program wants keep track of who currently has which devices in their possession so students are able to borrow (sign out) devices overnight from program TAs or professors. TAs or professors have different authorities to track, update devices info & status and manage users.
 
 ## My role in this project
-• Acted as Team Leader developed native Android and iOS app installed on every device which allows students to borrow and return devices via taking a selfie (facial recognition required) and scanning a device QR code 
-• Independently developed dashboard website to track, manage devices & manage 3 different levels of users.
+• Acted as Team Leader, developed native Android and iOS app installed on every device which allows students to borrow and return devices via taking a selfie (facial recognition required) and scanning a device QR code. 
+• Independently designed & developed a dashboard to manage, track devices & manage 3 different levels of users.
 
 1. Applied Angular 5, TypeScript, Bootstrap, jQuery for the front-end dashboard website. Angular routing for URL changes. Pipe for filtering devices. Angular guards to manage different views and permissions for different users.
-2. Applied RxJS library for reactive programming using observables to deal with server response asynchronously. 
-3. Firebase as the back-end to save all the inventory information shared by both the website and the mobile apps. 
-4. Implemented Firebase authentication using email and password for registered users’ login management. 
-5. Applied Angular Google Map - agm API to track the current device location
-6. Used Angular2-qrcode to generate QR code on the website and native Face Detection APIs for Facial recognition
-7. Used Git to manage and maintain the project
+2. Applied RxJS library for reactive programming using observables to deal with JSON response asynchronously. 
+3. Implemented Google Firebase authentication using email and password for registered users’ login management. 
+4. Firebase as the back-end to save all the inventory information shared by both the website and the mobile apps. 
+5. Hosted the dashboard website on Firebase and the demo link is in the GitHub repo above.
+6. Applied Angular Google Map - agm API to track and show each device’s real-time location.
+7. Used Angular2-qrcode to generate QR code on the website and native Face Detection APIs for Facial recognition
+8. Used Git to manage and maintain the project.
 
 ## Website Features
 1. A log-in is required for all features. Entering a valid username and password for the view and other operations. Valid means that the username exists in the Firebase database.
